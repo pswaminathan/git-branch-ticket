@@ -20,6 +20,12 @@
   revision = "53e6ce116135b80d037921a7fdd5138cf32d7a8a"
 
 [[projects]]
+  name = "github.com/jessevdk/go-flags"
+  packages = ["."]
+  revision = "96dc06278ce32a0e9d957d590bb987c81ee66407"
+  version = "v1.3.0"
+
+[[projects]]
   name = "github.com/trivago/tgo"
   packages = ["tcontainer","treflect"]
   revision = "e4d1ddd28c17dd89ed26327cf69fded22060671b"
@@ -28,6 +34,6 @@
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "008fb67b7799967cf1ae99297141e7d20f6f737411101c980db23e0e28730606"
+  inputs-digest = "2c602373e8c949ef320335b09be504a9c2cbb5fbc41b765ac4afb8d4952daf0d"
   solver-name = "gps-cdcl"
   solver-version = 1
