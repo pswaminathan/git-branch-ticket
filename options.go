@@ -13,15 +13,14 @@ var (
 
 type options struct {
 	Version     bool     `short:"v" long:"version" description:"Show version number and exit"`
-	AllBranches bool     `short:"a" long:"all-branches" description:"Retrieve ticket information for all JIRA-ticket-formatted branches"`
+	AllBranches bool     `short:"a" long:"all" description:"Retrieve ticket information for all JIRA-ticket-formatted branches"`
 	Branches    []string `short:"b" long:"branch" description:"Retrieve ticket information for named branches"`
 }
 
 func parseFlags() {
 	_, err := flags.Parse(&opts)
 	if err != nil {
-		e := err.(*flags.Error)
-		if e.Type != flags.ErrHelp {
+		if e := err.(*flags.Error); e.Type != flags.ErrHelp {
 			fmt.Println(err)
 		}
 		os.Exit(1)

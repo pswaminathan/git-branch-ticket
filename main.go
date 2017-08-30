@@ -22,7 +22,7 @@ func currentBranch(creds credentials) {
 	if err != nil {
 		log.Fatal(err)
 	}
-	if match := regex.MatchString(branchName); !match {
+	if !regex.MatchString(branchName) {
 		log.Fatalf("Branch name must match the JIRA format. This branch: %v\n", branchName)
 	}
 
